@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>BlogSphere</h1>
+        <% for (post of posts) { %>
+            <div class="post">
+                <h2 class="topic"><%= post.topic %></h2>
+                <h3 class="user">@<%= post.username %></h3>
+                <h4 class="content"><%= post.content %></h4>
+                
+                <% if (post.image && post.image !== "default.png") { %>
+                    <img src="<%= post.image %>" alt="Post Image">
+                <% } %>
+    
+                <div class="button-container">
+                    <a href="/posts/<%= post.id %>" class="btn details">See Details</a>
+                    <a href="/posts/<%= post.id %>/edit" class="btn edit">Edit</a>
+                    <a href="/posts/<%= post.id %>/upload" class="btn upload">Upload Photo</a>
+                    <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+                        <button class="btn delete">Delete</button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+    <br>
+    <a href="/posts/new">Create New Post</a>
+</body>
+</html>

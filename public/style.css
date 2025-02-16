@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #eeff99, #fad0c4);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    /* margin: 200px auto;
+    padding: 200px; */
+    background: rgb(182, 241, 142);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Post Styling */
+.post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Button Colors */
+.btn.edit { background-color: #007bff; }
+.btn.upload { background-color: #28a745; }
+.btn.delete { background-color: #dc3545; }
+.btn.details { background-color: #dc3586; }
+.btn.delete:hover { background-color: #c82333; }
+
+/* Image Styling */
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+.post {
+    background-color: #e3f2fd; /* Light blue */
+    border-left: 5px solid #0d47a1; /* Deep blue */
+}
+
+.post .user {
+    color: #1565c0; /* Medium blue */
+    font-weight: bold;
+}
+
+.post .content {
+    color: #0d47a1; /* Dark blue */
+    font-style: italic;
+}
+
